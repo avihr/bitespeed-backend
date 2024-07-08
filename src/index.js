@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
-import sequelize from "./src/models/index.js";
-import contactRoutes from "./src/routes/contactRoutes.js";
+import sequelize from "./models/index.js";
+import contactRoutes from "./routes/contactRoutes.js";
 
 const app = express();
 const port = 3000;
