@@ -35,8 +35,8 @@ export const identifyContact = async (req, res) => {
     );
     if (!primaryContact) {
         let primaryContactId = contacts[0].linkedId;
-        primaryContact = Contact.findOne(primaryContactId);
-        contacts = Contact.findAll({
+        primaryContact = await Contact.findByPk(primaryContactId);
+        contacts = await Contact.findAll({
             where: {
                 linkedId: primaryContactId,
             },
