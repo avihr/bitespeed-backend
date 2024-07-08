@@ -17,6 +17,11 @@ Contact.init(
         email: {
             type: DataTypes.STRING,
             allowNull: true,
+            validate: {
+                isEmail: {
+                    msg: "Invalid email",
+                },
+            },
         },
         linkedId: {
             type: DataTypes.INTEGER,
